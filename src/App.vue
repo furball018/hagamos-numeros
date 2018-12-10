@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <title-bar></title-bar>
-    <quien-pago></quien-pago>
+    <quien-pago v-bind:quienesPagaron="quienesPagaron"></quien-pago>
     <quienes-estan></quienes-estan>
   </div>
 </template>
@@ -17,6 +17,27 @@ export default {
     TitleBar,
     QuienPago,
     QuienesEstan
+  },
+  data(){
+    return{
+      quienesPagaron: [
+        {
+          name: 'Mati',
+          type: 'bebida',
+          total: 130
+        },
+        {
+          name: 'Lichi',
+          type: 'carne',
+          total: 780
+        },
+        {
+          name: 'Fede',
+          type: 'snacks',
+          total: 200
+        }
+      ]
+    }
   }
 }
 </script>
